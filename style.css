@@ -1,0 +1,479 @@
+﻿/* PALETA: grafite, branco e laranja */
+:root {
+    --fundo: #111827;
+    --superficie: #1f2937;
+    --superficie-clara: #273449;
+    --texto: #f3f4f6;
+    --texto-suave: #b8c2d1;
+    --destaque: #f97316;
+    --destaque-hover: #ea580c;
+    --borda: #374151;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--fundo);
+    color: var(--texto);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font-family: inherit;
+}
+
+/* CABEÇALHO */
+header {
+    background-color: #0b1220;
+    color: var(--texto);
+    min-height: 80px;
+    padding: 18px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    border-bottom: 1px solid var(--borda);
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--destaque);
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: var(--texto-suave);
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--destaque);
+}
+
+.carrinho {
+    background-color: var(--destaque);
+    color: #17210b;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* BANNER PRINCIPAL */
+.banner {
+    min-height: 440px;
+    padding: 80px 8%;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    background:
+        linear-gradient(90deg, rgba(8, 15, 28, 0.96), rgba(8, 15, 28, 0.42)),
+        url("baner Titanium X.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.banner-conteudo {
+    max-width: 560px;
+}
+
+.destaque {
+    color: var(--destaque);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 16px;
+}
+
+.banner h1 {
+    font-size: clamp(38px, 6vw, 66px);
+    line-height: 1.08;
+    margin-bottom: 20px;
+}
+
+.banner-conteudo > p:not(.destaque) {
+    color: #e5e7eb;
+    line-height: 1.8;
+    margin-bottom: 28px;
+    max-width: 440px;
+}
+
+.botao {
+    display: inline-block;
+    border: none;
+    background-color: var(--destaque);
+    color: #17210b;
+    padding: 14px 20px;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background-color: var(--destaque-hover);
+    transform: translateY(-2px);
+}
+
+/* SEÇÃO DE PRODUTOS */
+.produtos {
+    padding: 75px 7%;
+}
+
+.titulo {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.titulo h2,
+.sobre h2,
+.contato h2 {
+    font-size: clamp(26px, 4vw, 36px);
+    margin-bottom: 12px;
+}
+
+.titulo > p:last-child,
+.contato > p {
+    color: var(--texto-suave);
+    line-height: 1.7;
+}
+
+.grade-produtos {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.produto {
+    background-color: var(--superficie);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--borda);
+    transition: 0.3s;
+}
+
+.produto:hover {
+    transform: translateY(-6px);
+    border-color: var(--destaque);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.produto img {
+    display: block;
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    background-color: #0b1220;
+}
+
+.produto-info {
+    padding: 20px;
+}
+
+.categoria {
+    color: var(--destaque);
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.produto h3 {
+    font-size: 17px;
+    margin: 12px 0;
+}
+
+.preco {
+    font-size: 21px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+.comprar {
+    width: 100%;
+}
+
+/* SOBRE A LOJA */
+.sobre {
+    background-color: var(--superficie);
+    color: var(--texto);
+    padding: 70px 8%;
+    text-align: center;
+}
+
+.sobre h2 {
+    margin-bottom: 18px;
+}
+
+.sobre > p:last-child {
+    max-width: 620px;
+    margin: auto;
+    color: var(--texto-suave);
+    line-height: 1.8;
+}
+
+/* CONTATO */
+.contato {
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.contato > p {
+    margin-bottom: 24px;
+}
+
+/* RODAPÉ */
+footer {
+    background-color: #0b1220;
+    color: var(--texto);
+    padding: 28px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    border-top: 1px solid var(--borda);
+}
+
+footer p {
+    font-size: 12px;
+    color: var(--texto-suave);
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 1000px) {
+    .grade-produtos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    header {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 20px;
+        flex-direction: column;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .banner {
+        padding: 65px 25px;
+        min-height: 400px;
+    }
+
+    .produtos {
+        padding: 55px 18px;
+    }
+
+    .grade-produtos {
+        grid-template-columns: 1fr;
+    }
+
+    .produto img {
+        height: 260px;
+    }
+
+    footer {
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+
+/* PAINEL DO CARRINHO */
+.carrinho-dialog {
+    width: min(560px, calc(100% - 32px));
+    max-height: min(80vh, 700px);
+    margin: auto;
+    padding: 24px;
+    color: var(--texto);
+    background: var(--superficie);
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+    overflow-y: auto;
+}
+
+.carrinho-dialog::backdrop {
+    background: rgba(0, 0, 0, 0.65);
+}
+
+.carrinho-cabecalho,
+.carrinho-item,
+.carrinho-controles {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+}
+
+.carrinho-cabecalho {
+    margin-bottom: 20px;
+}
+
+.carrinho-cabecalho h2 {
+    font-size: 22px;
+}
+
+.carrinho-fechar,
+.carrinho-controles button {
+    color: var(--texto);
+    background: var(--superficie-clara);
+    border: 1px solid var(--borda);
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.carrinho-fechar {
+    width: 34px;
+    height: 34px;
+    font-size: 24px;
+}
+
+.carrinho-itens {
+    display: grid;
+    gap: 12px;
+    max-height: 48vh;
+    overflow-y: auto;
+}
+
+.carrinho-item {
+    padding: 14px 0;
+    border-bottom: 1px solid var(--borda);
+}
+
+.carrinho-item-detalhes h3 {
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.carrinho-item-detalhes p,
+.carrinho-vazio {
+    color: var(--texto-suave);
+    font-size: 14px;
+}
+
+.carrinho-controles {
+    flex-wrap: wrap;
+}
+
+.carrinho-controles button:not(.carrinho-remover) {
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
+}
+
+.carrinho-controles .carrinho-remover {
+    padding: 7px 9px;
+    color: var(--texto);
+}
+
+.carrinho-rodape {
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid var(--borda);
+    text-align: right;
+}
+
+.carrinho-total {
+    font-size: 16px;
+}
+
+.carrinho-total strong {
+    color: var(--destaque);
+}
+
+@media (max-width: 480px) {
+    .carrinho-dialog {
+        padding: 18px;
+    }
+
+    .carrinho-item {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+/* ACESSO À CONTA DENTRO DO CARRINHO */
+.carrinho-auth {
+    padding: 14px 0;
+    border-bottom: 1px solid var(--borda);
+}
+
+.carrinho-auth label {
+    display: block;
+    margin: 10px 0 5px;
+    color: var(--texto-suave);
+    font-size: 13px;
+}
+
+.carrinho-auth input {
+    width: 100%;
+    padding: 10px 12px;
+    color: var(--texto);
+    background: #111827;
+    border: 1px solid var(--borda);
+    border-radius: 6px;
+}
+
+.auth-acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.auth-acoes .botao {
+    padding: 10px 14px;
+}
+
+#auth-feedback {
+    margin-top: 8px;
+    color: var(--texto-suave);
+    font-size: 13px;
+}
+
+#auth-feedback[data-error="true"] {
+    color: #fca5a5;
+}
+
+#pedido-whatsapp {
+    width: 100%;
+    margin-top: 12px;
+}
+
+#pedido-whatsapp:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+
